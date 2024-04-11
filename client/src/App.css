@@ -1,0 +1,8 @@
+.App {
+  text-align: center;
+  background-image: url("https://wallpapers.com/images/hd/soldier-pictures-ictws213xwmq8d8k.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  box-sizing: border-box;
+}

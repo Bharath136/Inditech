@@ -1,0 +1,194 @@
+.soldier-details-container{
+    display: flex;
+    max-width: 1100px;
+    margin-left: 100px;
+    margin-top: 60px;
+}
+
+.soldier-image{
+    width: 300px;
+    height: 600px;
+}
+
+.soldier-details{
+    padding: 10px;
+}
+
+.soldier-details-header-container{
+    display: flex;
+    gap: 10px;
+}
+
+.soldier-status-icon{
+    width: 80px;
+}
+
+.soldier-header-details{
+    text-align: start;
+}
+
+.soldier-heading{
+    padding: 0;
+    margin: 0;
+    font-size: 28px;
+    color: white;
+}
+
+.soldier-ranking{
+    font-size: 22px;
+    color: rgb(186, 184, 184);
+}
+
+.weapon-details-container{
+    display: flex;
+    gap: 20px;
+}
+
+.weapon-types-list{
+    list-style-type: none;
+    padding: 0;
+    border-top: 1px solid rgb(153, 153, 153);
+}
+
+.weapon-details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 250px;
+    padding: 0 20px;
+    border-bottom: 1px solid rgb(153, 153, 153);
+    color: white;
+    cursor: pointer;
+}
+.weapon-details:hover{
+    background-color: aliceblue;
+    color: black;
+    transition: .1s ease-in-out;
+}
+
+.weapon-name{
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.soldier-score-weapon-container{
+    padding: 10px;
+}
+
+.weapon-score{
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.weapon-progress-bar {
+    width: 60px;
+    height: 4px;
+    background-color: #242b35;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.progress {
+    height: 100%;
+    background-color: #ff8c00;
+    border-radius: 5px;
+}
+
+.table-header {
+    display: flex;
+    gap: 20px;
+    color: white;
+    font-size: 16px;
+}
+
+.table-row{
+    display: flex;
+    gap: 60px;
+    color: white;
+    font-weight: 800;
+    font-size: 24px;
+}
+
+
+.guns-container{
+    width: 100%;
+    padding: 0;
+}
+
+.guns-list{
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.gun-item{
+    background-color: #1b2533;
+    opacity: .8;
+    min-width: 200px;
+    text-align: start;
+    padding: 10px;
+    flex-grow: 1;
+    color: white;
+    cursor: pointer;
+}
+.gun-item:hover{
+    background-color: white;
+    color: black;
+    transition: .2s ease-in-out;
+}
+
+.gun-name{
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+}
+
+
+.gun-container{
+    width: 100%;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.gun-image{
+    width: 160px;
+    color: rgb(255, 255, 255);
+}
+.gun-image:hover{
+    color: black;
+}
+
+.gun-type{
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+}
+
+.gun-capacity{
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+
+
+
+@media screen and (max-width:1030px) {
+    .soldier-image{
+        display: none;
+    }
+        .soldier-details-container{
+            margin-left: 0px;
+            padding: 10px;
+        }
+}
+
+@media screen and (max-width:768px) {
+    .weapon-details-container{
+        flex-direction: column;
+    }
+
+}
