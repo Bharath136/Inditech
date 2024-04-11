@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e73b4d96.css",
+    "main.js": "/static/js/main.f55c87f4.js",
+    "static/js/453.419a5d54.chunk.js": "/static/js/453.419a5d54.chunk.js",
+    "static/media/soldier__pic.png": "/static/media/soldier__pic.52d822061a5e5f17b0f6.png",
+    "static/media/level-wrapper.png": "/static/media/level-wrapper.4bb0e3d18a45c778771c.png",
+    "static/media/soldier__tank-white.png": "/static/media/soldier__tank-white.ea0258bd898bb4c8c421.png",
+    "index.html": "/index.html",
+    "main.e73b4d96.css.map": "/static/css/main.e73b4d96.css.map",
+    "main.f55c87f4.js.map": "/static/js/main.f55c87f4.js.map",
+    "453.419a5d54.chunk.js.map": "/static/js/453.419a5d54.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e73b4d96.css",
+    "static/js/main.f55c87f4.js"
+  ]
+}
