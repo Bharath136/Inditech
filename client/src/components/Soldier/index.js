@@ -14,13 +14,13 @@ const Soldier = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const weaponsResponse = await axios.get('http://localhost:9000/weapons');
+                const weaponsResponse = await axios.get('https://inditech.onrender.com/weapons');
                 setWeapons(weaponsResponse.data);
 
-                const gunsResponse = await axios.get('http://localhost:9000/guns');
+                const gunsResponse = await axios.get('https://inditech.onrender.com/guns');
                 setGuns(gunsResponse.data);
 
-                const scoresResponse = await axios.get('http://localhost:9000/scores');
+                const scoresResponse = await axios.get('https://inditech.onrender.com/scores');
                 setScores(scoresResponse.data);
             } catch (error) {
                 setError(error.message);
