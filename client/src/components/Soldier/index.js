@@ -9,29 +9,30 @@ const Soldier = () => {
     const [weapons, setWeapons] = useState([])
     const [scores, setScores] = useState([])
     const [guns, setGuns] = useState([])
+    const [error, setError] = useState(null)
 
     useEffect(() => {
-        const getWeapons = async () => {
-            const res = await axios.get('http://localhost:9000/weapons');
-            setWeapons(res.data)
-        }
-        getWeapons()
+        const fetchData = async () => {
+            try {
+                const weaponsResponse = await axios.get('http://localhost:9000/weapons');
+                setWeapons(weaponsResponse.data);
 
-        const getGuns = async () => {
-            const res = await axios.get('http://localhost:9000/guns');
-            setGuns(res.data)
-        }
-        getGuns()
+                const gunsResponse = await axios.get('http://localhost:9000/guns');
+                setGuns(gunsResponse.data);
 
-        const getScores = async () => {
-            const res = await axios.get('http://localhost:9000/scores');
-            setScores(res.data)
-        }
-        getScores()
+                const scoresResponse = await axios.get('http://localhost:9000/scores');
+                setScores(scoresResponse.data);
+            } catch (error) {
+                setError(error.message);
+            }
+        };
+
+        fetchData();
     }, [])
 
-
-
+    if (error) {
+        return <div style={{color:'red'}}>Error: {error}</div>;
+    }
 
     return (
         <div className="soldier-container">
