@@ -1,6 +1,5 @@
 import image from '../../assets/soldier__pic.png'
 import statusIcon from '../../assets/soldier__level.png'
-import gunImg from '../../assets/soldier__tank-white.png'
 import axios from 'axios'
 import './index.css'
 import { useEffect, useState } from 'react'
@@ -9,7 +8,8 @@ const Soldier = () => {
     const [weapons, setWeapons] = useState([])
     const [scores, setScores] = useState([])
     const [guns, setGuns] = useState([])
-    const [error, setError] = useState(null)
+    const [error, setError] = useState()
+    const [loading, setLoading] = useState(true); 
 
     useEffect(() => {
         const fetchData = async () => {
@@ -22,7 +22,10 @@ const Soldier = () => {
 
                 const scoresResponse = await axios.get('https://inditech.onrender.com/scores');
                 setScores(scoresResponse.data);
+
+                setLoading(false); 
             } catch (error) {
+                setLoading(false);
                 setError(error.message);
             }
         };
@@ -31,7 +34,11 @@ const Soldier = () => {
     }, [])
 
     if (error) {
-        return <div style={{color:'red'}}>Error: {error}</div>;
+        return <div style={{ color: 'red' }}>Error: {error}</div>;
+    }
+
+    if (loading) {
+        return <div><h2>Loading...</h2></div>; 
     }
 
     return (
@@ -87,7 +94,7 @@ const Soldier = () => {
                                         <li className='gun-item' key={gun._id}>
                                             <h1 className='gun-name'>{gun.name}</h1>
                                             <div className='gun-container'>
-                                                <img src={gunImg} className='gun-image' alt={gun.name} />
+                                                <img src={gun.image} className='gun-image' alt={gun.name} />
                                             </div>
                                             <h1 className='gun-type'>{gun.type}</h1>
                                             <p className='gun-capacity'>{gun.capacity}</p>

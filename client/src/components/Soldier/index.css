@@ -1,6 +1,6 @@
 .soldier-details-container{
     display: flex;
-    max-width: 1100px;
+    max-width: 1040px;
     margin-left: 100px;
     margin-top: 60px;
 }
@@ -128,7 +128,7 @@
 .gun-item{
     background-color: #1b2533;
     opacity: .8;
-    min-width: 200px;
+    min-width: 160px;
     text-align: start;
     padding: 10px;
     flex-grow: 1;
@@ -144,7 +144,7 @@
 .gun-name{
     padding: 0;
     margin: 0;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 
@@ -155,7 +155,7 @@
 }
 
 .gun-image{
-    width: 160px;
+    width: 100px;
     color: rgb(255, 255, 255);
 }
 .gun-image:hover{
